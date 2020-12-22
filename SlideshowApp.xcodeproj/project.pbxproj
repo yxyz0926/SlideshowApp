@@ -13,10 +13,10 @@
 		C588584125908C1E001C2082 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C588583F25908C1E001C2082 /* Main.storyboard */; };
 		C588584325908C25001C2082 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C588584225908C25001C2082 /* Assets.xcassets */; };
 		C588584625908C25001C2082 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C588584425908C25001C2082 /* LaunchScreen.storyboard */; };
-		C588584E25908D78001C2082 /* dog_pic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C588584D25908D78001C2082 /* dog_pic.jpg */; };
-		C588585025908D92001C2082 /* owl_pic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C588584F25908D92001C2082 /* owl_pic.jpg */; };
-		C588585225908DA5001C2082 /* squirrel_pic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C588585125908DA5001C2082 /* squirrel_pic.jpg */; };
 		C588585625908FAD001C2082 /* BigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C588585525908FAD001C2082 /* BigViewController.swift */; };
+		C588585A25917926001C2082 /* squirrel_pic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C588585725917925001C2082 /* squirrel_pic.jpg */; };
+		C588585B25917926001C2082 /* dog_pic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C588585825917925001C2082 /* dog_pic.jpg */; };
+		C588585C25917926001C2082 /* owl_pic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C588585925917926001C2082 /* owl_pic.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,10 +28,10 @@
 		C588584225908C25001C2082 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C588584525908C25001C2082 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C588584725908C25001C2082 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C588584D25908D78001C2082 /* dog_pic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = dog_pic.jpg; path = ../../../SlideshowApp/dog_pic.jpg; sourceTree = "<group>"; };
-		C588584F25908D92001C2082 /* owl_pic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = owl_pic.jpg; path = ../../../SlideshowApp/owl_pic.jpg; sourceTree = "<group>"; };
-		C588585125908DA5001C2082 /* squirrel_pic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = squirrel_pic.jpg; path = ../../../SlideshowApp/squirrel_pic.jpg; sourceTree = "<group>"; };
 		C588585525908FAD001C2082 /* BigViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigViewController.swift; sourceTree = "<group>"; };
+		C588585725917925001C2082 /* squirrel_pic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = squirrel_pic.jpg; sourceTree = "<group>"; };
+		C588585825917925001C2082 /* dog_pic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dog_pic.jpg; sourceTree = "<group>"; };
+		C588585925917926001C2082 /* owl_pic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = owl_pic.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,9 +72,9 @@
 				C588584225908C25001C2082 /* Assets.xcassets */,
 				C588584425908C25001C2082 /* LaunchScreen.storyboard */,
 				C588584725908C25001C2082 /* Info.plist */,
-				C588584D25908D78001C2082 /* dog_pic.jpg */,
-				C588584F25908D92001C2082 /* owl_pic.jpg */,
-				C588585125908DA5001C2082 /* squirrel_pic.jpg */,
+				C588585825917925001C2082 /* dog_pic.jpg */,
+				C588585925917926001C2082 /* owl_pic.jpg */,
+				C588585725917925001C2082 /* squirrel_pic.jpg */,
 			);
 			path = SlideshowApp;
 			sourceTree = "<group>";
@@ -137,12 +137,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C588585B25917926001C2082 /* dog_pic.jpg in Resources */,
+				C588585C25917926001C2082 /* owl_pic.jpg in Resources */,
 				C588584625908C25001C2082 /* LaunchScreen.storyboard in Resources */,
+				C588585A25917926001C2082 /* squirrel_pic.jpg in Resources */,
 				C588584325908C25001C2082 /* Assets.xcassets in Resources */,
-				C588585025908D92001C2082 /* owl_pic.jpg in Resources */,
-				C588585225908DA5001C2082 /* squirrel_pic.jpg in Resources */,
 				C588584125908C1E001C2082 /* Main.storyboard in Resources */,
-				C588584E25908D78001C2082 /* dog_pic.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,7 +310,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jp.techacademy.yu.iwawaki.SlideshowApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -328,7 +328,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jp.techacademy.yu.iwawaki.SlideshowApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
