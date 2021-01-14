@@ -18,6 +18,7 @@ class BigViewController: UIViewController {
         
         bigImageView.image = UIImage(named: x)
         
+        
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.

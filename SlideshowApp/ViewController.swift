@@ -14,15 +14,19 @@ class ViewController: UIViewController {
     @IBOutlet weak var slideButton: UIButton!
     @IBOutlet weak var nextImageButton: UIButton!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet var tapButton: UITapGestureRecognizer!
     
     let imageName = ["owl_pic.jpg", "dog_pic.jpg", "squirrel_pic.jpg"]
     var changeImageNo = 0
     
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
         imageView.image = UIImage(named: imageName[0])
+        
         
     }
     
@@ -66,61 +70,65 @@ class ViewController: UIViewController {
         self.imageView.image = UIImage(named: imageName[changeImageNo])
         
     }
-    
 
     
     @IBAction func startOrStop(_ sender: Any) {
+
+        
         
         if self.timer == nil {
             self.timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(changeImage), userInfo: nil, repeats: true)
-            
+
             slideButton.setTitle("停止", for: .normal)
-            
+
             nextImageButton.isEnabled = false
             backImageButton.isEnabled = false
 
-            
+
         } else {
             self.timer.invalidate()
-            
             self.timer = nil
-            
+
             slideButton.setTitle("再生", for: .normal)
-            
+
             nextImageButton.isEnabled = true
             backImageButton.isEnabled = true
         }
         
     }
-        
+//
     @IBAction func tapImage(_ sender: Any) {
 
-        switch changeImageNo {
-        case 0:
-            self.performSegue(withIdentifier: "toTap" , sender: nil)
-        case 1:
-            self.performSegue(withIdentifier: "toTap" , sender: nil)
-
-        default:
-            self.performSegue(withIdentifier: "toTap" , sender: nil)
-        }
-
+        self.timer.invalidate()
         
+        
+        
+//       self.timer.invalidate()
+//        print("tap")
+//        switch changeImageNo {
+//        case 0:
+//            self.performSegue(withIdentifier: "toTap" , sender: nil)
+//        case 1:
+//            self.performSegue(withIdentifier: "toTap" , sender: nil)
+//
+//        default:
+//            self.performSegue(withIdentifier: "toTap" , sender: nil)
+//        }
+//
+//
         }
 
-        override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         
         if segue.identifier == "toTap" {
-
-        let bigViewController = segue.destination as! BigViewController
-
+            
+            let bigViewController = segue.destination as! BigViewController
             bigViewController.x = imageName[changeImageNo]
-
+            }
+        if self.timer != nil {
+            self.timer.invalidate()
         }
-
-        }
-
-    
+    }
     
     @IBAction func unwind(_ segue: UIStoryboardSegue){
 }

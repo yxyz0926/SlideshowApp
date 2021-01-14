@@ -82,14 +82,14 @@
                         <outlet property="imageView" destination="nNr-PD-mGg" id="o4h-ij-oE0"/>
                         <outlet property="nextImageButton" destination="KV0-aG-FFF" id="cpY-z5-0rw"/>
                         <outlet property="slideButton" destination="Tfj-vx-5ti" id="UtC-U0-w7D"/>
-                        <segue destination="XXT-Eu-OCA" kind="show" identifier="toBigView" id="s25-EB-HnU"/>
+                        <outlet property="tapButton" destination="9rQ-9d-Q4f" id="eeb-4W-4LR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="9rQ-9d-Q4f">
                     <connections>
                         <action selector="tapImage:" destination="BYZ-38-t0r" id="ydT-XD-pqq"/>
-                        <segue destination="XXT-Eu-OCA" kind="presentation" identifier="toTap" id="If9-9A-9Bp"/>
+                        <segue destination="XXT-Eu-OCA" kind="presentation" identifier="toTap" id="xwD-ob-YCG"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -143,7 +143,4 @@
             <point key="canvasLocation" x="915.94202898550736" y="112.5"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="s25-EB-HnU"/>
-    </inferredMetricsTieBreakers>
 </document>
