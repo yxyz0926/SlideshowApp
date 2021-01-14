@@ -27,7 +27,6 @@ class ViewController: UIViewController {
     
         imageView.image = UIImage(named: imageName[0])
         
-        
     }
     
     
@@ -57,8 +56,8 @@ class ViewController: UIViewController {
         
     }
     
-    //タイマー
-    var timer: Timer!
+    
+    
     
     @objc func changeImage(){
         
@@ -71,6 +70,8 @@ class ViewController: UIViewController {
         
     }
 
+    
+    var timer: Timer!
     
     @IBAction func startOrStop(_ sender: Any) {
 
@@ -96,27 +97,7 @@ class ViewController: UIViewController {
         }
         
     }
-//
-    @IBAction func tapImage(_ sender: Any) {
 
-        self.timer.invalidate()
-        
-        
-        
-//       self.timer.invalidate()
-//        print("tap")
-//        switch changeImageNo {
-//        case 0:
-//            self.performSegue(withIdentifier: "toTap" , sender: nil)
-//        case 1:
-//            self.performSegue(withIdentifier: "toTap" , sender: nil)
-//
-//        default:
-//            self.performSegue(withIdentifier: "toTap" , sender: nil)
-//        }
-//
-//
-        }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         
@@ -127,13 +108,14 @@ class ViewController: UIViewController {
             }
         if self.timer != nil {
             self.timer.invalidate()
+            self.startOrStop(slideButton as Any)
+            
         }
     }
     
+    
     @IBAction func unwind(_ segue: UIStoryboardSegue){
-}
+        }
 
-
-
-
+    
 }
